@@ -1,0 +1,106 @@
+import { useState } from 'react';
+
+export default function Form() {
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+
+  const fullName = firstName + ' ' + lastName;
+
+  function handleFirstNameChange(e) {
+    setFirstName(e.target.value);
+  }
+
+  function handleLastNameChange(e) {
+    setLastName(e.target.value);
+  }
+
+  return (
+    <>
+      <h2>Let’s check you in</h2>
+      <label>
+        First name:{' '}
+        <input
+          value={firstName}
+          onChange={handleFirstNameChange}
+        />
+      </label>
+      <label>
+        Last name:{' '}
+        <input
+          value={lastName}
+          onChange={handleLastNameChange}
+        />
+      </label>
+      <p>
+        Your ticket will be issued to: <b>{fullName}</b>
+      </p>
+    </>
+  );
+}
+
+
+
+// this function with react js to increase value of num (1) during 
+click on button 
+
+
+import React,{Component} from 'react';
+import { useState } from 'react';
+import '../sass/main.css';
+import data from'../data.json';
+
+class Main extends Component {
+    constructor(){
+        super()
+        this.state={
+            num:0
+        }
+        this.event = this.event.bind(this);
+    }
+    event(){
+       this.setState(function(pre){
+         return {
+             num: pre.num +1
+            }
+       })
+        
+    }
+        
+    
+     render(){
+        return (
+          <div>
+            <h1>{this.state.num}</h1>
+            <button onClick={this.event} className='btn btn-danger'> click</button>
+          </div>
+        )
+     }
+}
+export default Main;
+
+import React,{Component} from 'react';
+import { useState } from 'react';
+import '../sass/main.css';
+import photo from './photo.png';
+import data from'../data.json';
+
+class Main extends Component {
+    constructor(){
+        super()
+        this.state={
+            mydata:data
+        }  
+    }
+     render(){
+       
+        return (
+          <div>
+            <img src={photo} alt={data.user.name}></img>
+            <h1>{data.user.name}</h1>
+            <h1>{data.user.id}</h1>
+           </div>
+        )
+     }
+}
+export default Main;
+

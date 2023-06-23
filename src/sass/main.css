@@ -1,0 +1,23 @@
+.bg-dark {
+  background-color: currentColor !important;
+}
+
+.offcanvas {
+  background-color: currentColor;
+}
+
+.offcanvas-title {
+  color: white;
+}
+
+body {
+  background-color: #110821;
+}
+
+.btn-success {
+  background-color: #1caa3f;
+}
+
+.dropdown-menu li:hover {
+  background-color: #1caa3f;
+}/*# sourceMappingURL=main.css.map */

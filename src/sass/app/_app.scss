@@ -1,0 +1,28 @@
+
+$color-bg:#110821;
+$color-text:#f3eefb;
+$color-pr-btn:#4f6b19;
+$color-sc-btn:#1caa3f;
+$color-header:currentColor;
+.bg-dark{
+    background-color: $color-header !important;
+}
+.offcanvas {
+    background-color: $color-header;
+}
+.offcanvas-title{
+    color:white;
+  }
+body{
+    background-color: $color-bg;
+   
+  }
+.btn-success{
+    background-color: $color-sc-btn;
+}
+.dropdown-menu li{
+    &:hover{
+        background-color: $color-sc-btn;
+    }
+
+}
